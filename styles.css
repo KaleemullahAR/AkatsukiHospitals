@@ -1,95 +1,139 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+/* Container */
+.container {
+  margin: auto;
+  width: 50%;
+  padding: 45px;
+   background-color: rgb(130,106,251);
 }
-body{
-  min-height: 100vh;
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Form */
+.form {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #4070f4;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.wrapper{
-  position: relative;
-  max-width: 430px;
-  width: 100%;
-  background: #fff;
-  padding: 34px;
-  border-radius: 6px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-.wrapper h2{
-  position: relative;
-  font-size: 22px;
-  font-weight: 600;
-  color: #333;
-}
-.wrapper h2::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 28px;
-  border-radius: 12px;
-  background: #4070f4;
-}
-.wrapper form{
+
+.form h3 {
+  font-size: 24px;
   margin-top: 30px;
+  margin-bottom: 15px;
 }
-.wrapper form .input-box{
-  height: 52px;
-  margin: 18px 0;
-}
-form .input-box input{
-  height: 100%;
+
+/* Input Boxes */
+.input-box {
   width: 100%;
-  outline: none;
-  padding: 0 15px;
-  font-size: 17px;
-  font-weight: 400;
-  color: #333;
-  border: 1.5px solid #C7BEBE;
-  border-bottom-width: 2.5px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
-.input-box input:focus,
-.input-box input:valid{
-  border-color: #4070f4;
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
-form .policy{
-  display: flex;
-  align-items: center;
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
-form h3{
-  color: #707070;
-  font-size: 14px;
-  font-weight: 500;
-  margin-left: 10px;
-}
-.input-box.button input{
-  color: #fff;
-  letter-spacing: 1px;
-  border: none;
-  background: #4070f4;
+
+select {
   cursor: pointer;
 }
-.input-box.button input:hover{
-  background: #0e4bf1;
+
+textarea {
+  height: 100px;
 }
-form .text h3{
- color: #333;
- width: 100%;
- text-align: center;
+
+/* Diabetes select box */
+.diabetes-box {
+  margin-bottom: 20px;
 }
-form .text h3 a{
-  color: #4070f4;
-  text-decoration: none;
+
+/* Allergy options */
+.allergy-options {
+  display: flex;
+  flex-wrap: wrap;
 }
-form .text h3 a:hover{
-  text-decoration: underline;
+
+.allergy {
+  margin-right: 20px;
+}
+
+/* Gender radio group */
+.radio-group {
+  display: flex;
+  margin-top: 5px;
+}
+
+.radio-group label {
+  margin-right: 10px;
+}
+
+/* Reason select box and other input */
+#other-input {
+  margin-top: 10px;
+}
+
+#other-reason {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Validation Error Messages */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .input-box {
+    width: 48%;
+  }
 }
